@@ -19,5 +19,5 @@ announces:
 - Enchanting is different here. Make sure you have 30 XP levels!
 - Killing people with Smite & Looting on your sword will give a chance to drop their head!
 announceTimer: 30
-randomAnnounce: true
+randomAnnounce: false
 announcePrefix: '&6[Announce]&r '
