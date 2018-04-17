@@ -1,0 +1,23 @@
+rules:
+- 1. Actions that may affect players outside of the game are strictly prohibited.
+- 2. No alts or bots. In game wealth must be acquired by hand and not by automated
+  scripts/programs.
+- 3. No hacking, duping, intentionally causing lag, or bug exploitation. This includes
+  any modified Minecraft client that changes packets sent to the server.
+- 4. No lying to a member of staff during an investigation.
+- 5. Staff will only take action on player-submitted evidence of wrong doing a maximum
+  of 1 month after evidence is discovered.
+- 6. Do not assist others in breaking any of these rules.
+- 7. Staff have the right to remove any content / player deemed harmful to the community
+  in discord & in game.
+announces:
+- Remember to read /rules
+- We use reddit for our forums https://www.reddit.com/r/Expand/
+- Want to start a nation? Look here https://www.reddit.com/r/Expand/wiki/nationlands
+- Thought about making a shop? check this https://www.reddit.com/r/Expand/wiki/localmarket
+- We have a discord at https://discord.gg/xPSrfk4
+- Enchanting is different here. Make sure you have 30 XP levels!
+- Killing people with Smite & Looting on your sword will give a chance to drop their head!
+announceTimer: 30
+randomAnnounce: true
+announcePrefix: '&6[Announce]&r '

@@ -1,0 +1,236 @@
+# Effectively Modern Humbug. For 1.10 ground up.
+
+configuration_file_version: 1
+
+debug: true
+broadcast_permission: simpleadmin.broadcast
+
+hacks:
+  Experimental:
+    enabled: false
+    combatspy: true
+    teleportspy: false
+    postteleport:
+      spy: false
+      count: 10
+  GameFeatures:
+    enabled: true
+    disablePotatoXP: false
+    # Villager trading is not like above and true = able to trade and false = not able
+    villagerTrading: false
+    # Wither spawn is also true = enabled and false = disabled
+    witherSpawning: true
+    # Enderchests is also true = enabled and false = disabled
+    enderChestPlacement: true
+    enderChestUse: false
+    # ElytraUse: true  = enabled, false = disabled
+    elytraUse: true
+    chorusFruitTeleportation: false
+    # WeepingAngel bans people when they die, the numbers are in minutes.
+    weepingAngel:
+      enabled: false
+      environment: 1
+      playerKill: 5
+    # prevent use of buckets or dispensing water in hell biomes
+    blockWaterInHell: true
+    minecartTeleport: false
+    obsidianGenerators: false
+    personalDeathMessages: false
+  GameFixes:
+    enabled: true
+    # Does not fully work atm
+    blockElytraBreakBug: false
+    damageOnElytraBreakBug: 1.0
+    canStorageTeleport: false
+    stopHopperDupe: true
+    stopRailDupe: true
+    stopEndPortalDeletion: true
+    stopBedBombingInHellBiomes: true
+    preventTreeWraparound: true
+    fixPearlGlitch: true
+    maxFluidHeight: 100
+    maxFluidAmount: 400
+    maxFluidTimer: 1200
+  GameTuning:
+    enabled: true
+    chunkLimits:
+      enabled: true
+      exceededMessage: '&9Limit reached for this chunk, you cannot place more of this type of block.'
+      tileEntities:
+        HOPPER: 4
+        PISTON_BASE: 4
+        PISTON_STICKY_BASE: 4
+        DISPENSER: 4
+        DROPPER: 4
+        REDSTONE_COMPARATOR: 4
+        OBSERVER: 2
+      exempt:
+      - Steve
+      - Alex
+    daytimeBed:
+      enabled: true
+      spawnSetMessage: '&7Your spawn has been set.'
+    # Makes nether ratio 1 to 1
+    oneToOneNether: true
+    # Return nether portal, true = enabled    false = disabled
+    returnNetherPortal: true
+    allowNetherTravel: true
+    # Disables minecart inventories (trying to fix dupe issues)
+    # enabled = able to right click   disabled = not able to right click
+    chestedMinecartInventories: false
+    hopperMinecartInventories: false
+    enderChestInventories: false
+    stopTrapHorses: true
+    killTrapHorses: true
+    changeSpawnerType: false
+    allowVillagerTrading: false
+    enderGrief: true
+    witherGrief: true
+    #the following are random chances with max of 1000000
+    extraGhastSpawnRate: 0
+    extraWitherSpawnRate: 0
+    extraGhastPortalSpawnRate: 0
+    extraWitherPortalSpawnRate: 0
+    pigPortalSpawnMultiplier: 0
+    witherSkullDropRate: 0
+    extraMagmaSpawnRate: 0
+    allowEnchantedApples: true
+    preventFallingThroughBedrock: true
+    #a list of materials players shouldn't be allowed to place at all
+    noplace:
+     - BEDROCK
+     - DRAGON_EGG
+  CTAnnounce:
+    enabled: false
+    delay: 10000
+    message: '%Victim% was combat tagged by %Attacker%'
+    broadcast: [OP, CONSOLE]
+  NewfriendAssist:
+    enabled: true
+    announce: '&f%Player% is brand new!'
+    broadcast: [PERM, CONSOLE]
+    helptips: on
+    helptips_end: 20m
+    introkit:
+      enabled: true
+      contents:
+       - ==: org.bukkit.inventory.ItemStack
+         type: COOKIE
+         amount: 32
+         meta:
+           ==: ItemMeta
+           meta-type: UNSPECIFIC
+           display-name: 'Manna'
+           lore:
+            - "Gift from the Admins as you"
+            - "begin your journey on Expand."
+       - ==: org.bukkit.inventory.ItemStack
+         type: BED
+         amount: 1
+         meta:
+           ==: ItemMeta
+           meta-type: UNSPECIFIC
+           lore:
+            - "This world is unforgiving."
+            - "Be sure to get a good night's"
+            - "rest soon."
+  Introbook:
+    enabled: true
+    follow: true
+    contents:
+      title: Welcome, ${player}
+      author: Expand
+      pages:
+       - "   &oWelcome to Expand, ${player}!"
+       - "    &oWhat is Expand?\n\"We aim to combine the most enjoyable parts of Factions, Towny and Civ servers to create an unrivaled, Hardcore Survival & Political interaction server."
+       - "    &oWhat is Expand?&r\n&lNOT just survival&r\nAdmins are hands-off and only handle glitches and hackers\n&lNOT just chaos&r\nPlugins allow players and towns to enforce their own rules\n&lNOT just roleplay&r\nNobody pretends -- conflict is genuine and heated"
+       - "    &oBasic Mechanics&r\n-The world is vanilla generated\n-Respawn in random area unless you sleep\n-Mobs spawn sparsely\n-Vanilla Nether\n-Custom ore spawning."
+       - "   &oExpand Server Mods&r\n   &lNationLands&r:\n Allows players to band together and protect biome sizes of land. \n&lMore Info:&r &oWiki Page:&r https://www.reddit.com/r/Expand/wiki/nationlands\n&oType \"/nation help\" in chat to get commands"
+       - "   &lLocal Market&r:\n Create secure shops to facilitate the best trade deals in town!\n&lMore Info:&r &oWiki Page:&r https://www.reddit.com/r/Expand/wiki/localmarket"
+       - "   &lHiddenOre&r:\n Generates ore as you mine! Allows for more than ores to be found in the ground."
+       - "   &lRealistic Biomes&r:\n Biomes are large, crops grow different in different biomes. Hit ground with seed to see growth rate. Farms need sunlight. Crops grow with nobody around."
+       - "   &lArthropod Egg&r:\n Allows you to capture passive mobs into spawn eggs using Bane of Arthropod enchantment."
+       - "   &oFurther Info&r\nVisit our subreddit at: &ohttp://bit.ly/rExpand&r\nor even discord at: &ohttp://bit.ly/ExpandDiscord"
+       - "We extend our appreciation to the devs, admins, and players at\n&oreddit.com/r/Civcraft\n&oreddit.com/r/Devoted\n&oreddit.com/r/CivClassics"
+  HackBot:
+    enabled: false
+    bots:
+      Rando:
+        name: Rando4800xXx
+        skin: DeepCopy
+        spawnLocation:
+          ==: org.bukkit.Location
+          yaw: 0.0
+          pitch: 0.0
+          z: 50.0
+          y: 40.0
+          world: world
+          x: 50.0
+        alive: false
+        location:
+          ==: org.bukkit.Location
+          yaw: 0.0
+          pitch: 0.0
+          z: 50.0
+          y: 40.0
+          world: world
+          x: 50.0
+  InvControl:
+    enabled: true
+  InvisibleFixTwo:
+    enabled: false
+    # in ticks -- ticks to wait after teleport to force update
+    teleportDelay: 5
+    # in milliseconds -- min time between forced updates if active
+    minInterval: 100
+    ignoreOps: true
+    ignorePermission: sah.allowInvisible
+  InvisibleFix:
+    enabled: false
+    ignoreOps: true
+    ignorePermission: sah.allowInvisible
+    # in ticks
+    recheckInterval: 500
+  ReinforcedChestBreak:
+    enabled: false
+    # in seconds
+    delay: 180
+    message: "&4%player% is raiding a chest at %x% %y% %z%."
+  SanityHack:
+    enabled: false
+    trackPlace: true
+    trackBreak: true
+    belowYLevel: 7
+  TimingsHack:
+    enabled: true
+  BadBoyWatch:
+    enabled: true
+    trackingDepth: 16
+    clearOnMatch: true
+    watchedMaterials:
+     - CHEST
+     - FURNACE
+     - DROPPER
+     - DISPENSER
+     - JUKEBOX
+     - NOTE_BLOCK
+     - BEACON
+     - ENDER_CHEST
+     - SPONGE
+     - HOPPER
+     - PISTON_BASE
+     - PISTON_STICKY_BASE
+     - OBSERVER
+  Insight:
+    enabled: false
+    into:
+    - org.bukkit.event.player
+    - org.bukkit.event.entity
+    - org.bukkit.event.block
+    - org.bukkit.event.inventory
+    - org.bukkit.event.enchantment
+    - org.bukkit.event.hanging
+    - org.bukkit.event.painting
+    - org.bukkit.event.vehicle
+    - org.bukkit.event.weather
+    - org.bukkit.event.world
