@@ -18,6 +18,7 @@ announces:
 - We have a discord at https://discord.gg/xPSrfk4
 - Enchanting is different here. Make sure you have 30 XP levels!
 - Killing people with Smite & Looting on your sword will give a chance to drop their head!
+- Use /helpop to leave an admin a question!
 announceTimer: 30
 randomAnnounce: false
 announcePrefix: '&6[Announce]&r '
