@@ -8,6 +8,7 @@ default_fuel:
   Coal:
     material: COAL
     amount: 1
+    durability: -1
 default_fuel_consumption_intervall: 2s
 default_menu_factory: Workshop
 default_return_rate: 0.5
